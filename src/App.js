@@ -7,11 +7,11 @@ export default function App() {
     <div className="App">
       <div className="container">
         <Weather />
-        <footer>
-          This project has been built by{" "}
-          <a href="https://github.com/Kumaguro3/weather-react">Sergent Julie</a>
-        </footer>
       </div>
+      <footer>
+        This app has been built by{" "}
+        <a href="https://github.com/Kumaguro3/weather-react">Sergent Julie</a>
+      </footer>
     </div>
   );
 }

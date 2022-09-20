@@ -22,6 +22,7 @@ export default function Weather() {
               type="text"
               placeholder="Enter a city"
               id="search-text-input"
+              autoFocus="on"
             />
             <button type="submit" class="btn btn-primary">
               Go!
