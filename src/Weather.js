@@ -24,11 +24,12 @@ export default function Weather() {
               id="search-text-input"
               autoFocus="on"
             />
-            <button type="submit" class="btn btn-primary">
+
+            <button type="submit" class="button-click">
               Go!
             </button>
           </form>
-          <button type="click" class="btn btn-primary" id="current-location">
+          <button type="click" class="button-click" id="current-location">
             Current
           </button>
         </div>
