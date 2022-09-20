@@ -13,22 +13,41 @@
   opacity: 1;
 }
 
-h1 {
+.container h1 {
   font-weight: bold;
   font-size: 50px;
 }
 
-h2 {
+.container h2 {
   padding: 0 0 20px 0;
 }
 
-h4 {
+.container h4 {
   font-weight: bold;
   padding: 0 0 0 0;
 }
 
-h3 {
+.container h3 {
   font-size: 40px;
+}
+
+.container h4 {
+  font-weight: bolder;
+}
+
+.container2 {
+  display: flex;
+  font-size: 11px;
+}
+
+.container2 .active {
+  color: black;
+  cursor: default;
+  text-decoration: none;
+}
+
+.container2 .active:hover {
+  text-decoration: none;
 }
 
 .img-fluid {
