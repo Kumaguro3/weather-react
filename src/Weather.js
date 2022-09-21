@@ -58,13 +58,12 @@ export default function Weather() {
             °F
           </a>
         </div>
-      </div>
-
-      <div className="container">
         <div className="description">
           <h4 id="description">{weatherData.description}</h4>
         </div>
+      </div>
 
+      <div className="container3">
         <div className="col-md-12 col-sm-3 col-xs-3 side-weather-info">
           <h6 className="precipitation">
             Precipitation:{" "}
