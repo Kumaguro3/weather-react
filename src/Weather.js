@@ -8,6 +8,7 @@ export default function Weather() {
     time: "10:00",
     temperature: "19",
     description: "Clear",
+    precipitation: "40",
     humidity: "60",
     wind: "5",
     imgUrl: "https://ssl.gstatic.com/onebox/weather/64/sunny.png",
@@ -38,7 +39,12 @@ export default function Weather() {
         <h4 className="dayOfWeek">{weatherData.day}</h4>
         <h4 className="time">{weatherData.time}</h4>
 
-        <img src={weatherData.imgUrl} alt={weatherData.description} id="icon" />
+        <img
+          src={weatherData.imgUrl}
+          alt={weatherData.description}
+          id="icon"
+          className="main-weather-icon"
+        />
         <br />
         <div className="container2">
           <h3 className="temperature" id="main-temperature">
@@ -53,11 +59,18 @@ export default function Weather() {
           </a>
         </div>
       </div>
+
       <div className="container">
         <div className="description">
           <h4 id="description">{weatherData.description}</h4>
         </div>
 
+        <div className="col-md-12 col-sm-3 col-xs-3 side-weather-info">
+          <h6 className="precipitation">
+            Precipitation:{" "}
+            <spam id="precipitation"> {weatherData.precipitation}</spam>%
+          </h6>
+        </div>
         <div className="col-md-12 col-sm-3 col-xs-3 side-weather-info">
           <h6 className="humidity">
             Humidity: <spam id="humidity">{weatherData.humidity}</spam>%

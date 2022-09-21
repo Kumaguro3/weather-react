@@ -13,6 +13,14 @@
   opacity: 1;
 }
 
+.container h1,
+h4,
+.container2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .container h1 {
   font-weight: bold;
   font-size: 50px;
