@@ -1,8 +1,8 @@
 .button-click {
   border: 2px solid white;
   border-radius: 5px;
-  padding: 10px auto;
-  margin: 5px;
+  padding: 3px auto;
+  margin: 2px 2px 2px 3px;
   color: rgb(13, 12, 12);
   background-color: rgb(254, 254, 254);
   opacity: 0.8;
