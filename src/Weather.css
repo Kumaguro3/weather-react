@@ -9,6 +9,10 @@
   cursor: pointer;
 }
 
+.Weather {
+  max-width: 550px;
+}
+
 .button-click:hover {
   opacity: 1;
 }

@@ -1,12 +1,11 @@
 .App {
   padding: 15px;
-  min-width: 320px;
-  max-width: 400px;
-  max-height: 800px;
-  margin: 30px auto;
+  min-width: 340px;
+  max-width: 1280px;
+  min-height: 667px;
+  height: 1080px;
   border: 2px solid rgb(213, 213, 213);
   border-radius: 10px;
-  height: 500px;
   background-image: url("https://img.freepik.com/free-vector/gorgeous-clouds-background-with-blue-sky-design_1017-25501.jpg?w=2000&t=st=1663666927~exp=1663667527~hmac=d852646e3983d0c14fe6caccd070d25641118af58fa0db10cca2fcd45f788262");
   background-position: center;
   background-repeat: no-repeat;
