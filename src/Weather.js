@@ -17,7 +17,7 @@ export default function Weather(props) {
       temperature: response.data.main.temp,
       icon: response.data.weather[0].icon,
       description: response.data.weather[0].description,
-      precipitation: response.data.main.precipitation,
+      cloudiness: response.data.clouds.all,
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
     });
@@ -94,8 +94,12 @@ export default function Weather(props) {
         <div className="container3">
           <div className="col-md-12 col-sm-3 col-xs-3 side-weather-info">
             <h6 className="precipitation">
-              Precipitation:{" "}
-              <spam id="precipitation"> {weatherData.precipitation}</spam>%
+              Cloudiness:{" "}
+              <spam id="precipitation">
+                {" "}
+                {Math.round(weatherData.cloudiness)}
+              </spam>
+              %
             </h6>
           </div>
           <div className="col-md-12 col-sm-3 col-xs-3 side-weather-info">
@@ -106,7 +110,7 @@ export default function Weather(props) {
 
           <div className="col-md-12 col-sm-3 col-xs-3 side-weather-info">
             <h6 className="wind">
-              Wind: <spam id="wind"> {weatherData.wind}</spam>km/h
+              Wind: <spam id="wind"> {Math.round(weatherData.wind)}</spam>km/h
             </h6>
           </div>
         </div>
