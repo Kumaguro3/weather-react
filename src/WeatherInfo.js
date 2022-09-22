@@ -12,7 +12,7 @@ export default function WeatherInfo(props) {
         <h4>
           <FormattedDate date={props.data.date} />
         </h4>
-        <div class="float-left">
+        <div>
           <WeatherIcon code={props.data.icon} />
         </div>
 

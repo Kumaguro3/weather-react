@@ -48,6 +48,7 @@ h4,
 
 .container h4 {
   font-weight: bolder;
+  margin: 10px auto;
 }
 
 .container2 {
