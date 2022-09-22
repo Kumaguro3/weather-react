@@ -2,6 +2,7 @@ import React from "react";
 import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
 import WeatherTemperature from "./WeatherTemperature";
+import "./Weather.css";
 
 export default function WeatherInfo(props) {
   return (
@@ -28,20 +29,20 @@ export default function WeatherInfo(props) {
         </div>
       </div>
       <div className="container3">
-        <div className="col-md-12 col-sm-3 col-xs-3 side-weather-info">
+        <div className="col-md-12 col-sm-12 col-xs-3 side-weather-info">
           <h6 className="precipitation">
             Cloudiness:{" "}
             <spam id="precipitation"> {Math.round(props.data.cloudiness)}</spam>
             %
           </h6>
         </div>
-        <div className="col-md-12 col-sm-3 col-xs-3 side-weather-info">
+        <div className="col-md-12 col-sm-12 col-xs-3 side-weather-info">
           <h6 className="humidity">
             Humidity: <spam id="humidity">{props.data.humidity}</spam>%
           </h6>
         </div>
 
-        <div className="col-md-12 col-sm-3 col-xs-3 side-weather-info">
+        <div className="col-md-12 col-sm-12 col-xs-3 side-weather-info">
           <h6 className="wind">
             Wind: <spam id="wind"> {Math.round(props.data.wind)}</spam>km/h
           </h6>

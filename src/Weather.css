@@ -7,6 +7,10 @@
   background-color: rgb(254, 254, 254);
   opacity: 0.8;
   cursor: pointer;
+  height: min-content;
+  white-space: normal;
+  word-wrap: break-word;
+  display: inline-flex;
 }
 
 .Weather {
@@ -15,6 +19,10 @@
 
 .button-click:hover {
   opacity: 1;
+}
+
+.container .btn-group {
+  display: flex;
 }
 
 .container h1 {
@@ -64,8 +72,9 @@ h4,
   text-decoration: none;
 }
 
-.container3 {
-  align-items: flex-start;
+.container3 h6 {
+  display: block;
+  font-size: 15px;
 }
 
 .img-fluid {
