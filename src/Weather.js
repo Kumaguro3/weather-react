@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
-import FormattedDate from "./FormattedDate";
+import WeatherInfo from "./WeatherInfo";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -59,60 +59,7 @@ export default function Weather(props) {
               Current
             </button>
           </div>
-
-          <h1 className="main-city" id="main-city">
-            {weatherData.city}
-          </h1>
-          <h4>
-            <FormattedDate date={weatherData.date} />
-          </h4>
-
-          <img
-            src={weatherData.icon}
-            alt={weatherData.description}
-            id="icon"
-            className="main-weather-icon"
-          />
-          <br />
-          <div className="container2">
-            <h3 className="temperature" id="main-temperature">
-              {Math.round(weatherData.temperature)}
-            </h3>
-            <a href="https://www.google.com/" id="celsius-link" class="active">
-              °C
-            </a>{" "}
-            |
-            <a href="https://www.google.com/" id="fahren-link">
-              °F
-            </a>
-          </div>
-          <div className="description">
-            <h4 id="description">{weatherData.description}</h4>
-          </div>
-        </div>
-
-        <div className="container3">
-          <div className="col-md-12 col-sm-3 col-xs-3 side-weather-info">
-            <h6 className="precipitation">
-              Cloudiness:{" "}
-              <spam id="precipitation">
-                {" "}
-                {Math.round(weatherData.cloudiness)}
-              </spam>
-              %
-            </h6>
-          </div>
-          <div className="col-md-12 col-sm-3 col-xs-3 side-weather-info">
-            <h6 className="humidity">
-              Humidity: <spam id="humidity">{weatherData.humidity}</spam>%
-            </h6>
-          </div>
-
-          <div className="col-md-12 col-sm-3 col-xs-3 side-weather-info">
-            <h6 className="wind">
-              Wind: <spam id="wind"> {Math.round(weatherData.wind)}</spam>km/h
-            </h6>
-          </div>
+          <WeatherInfo data={weatherData} />
         </div>
       </div>
     );
