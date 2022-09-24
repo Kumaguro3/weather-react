@@ -1,9 +1,9 @@
 .app {
   padding: 15px;
-  min-width: 320px;
-  max-width: 600px;
+  min-width: 300px;
+  max-width: 450px;
   max-height: 800px;
-  margin: 30px auto;
+  margin: 50px auto;
   border: 2px solid rgb(213, 213, 213);
   border-radius: 10px;
   background-image: url(./Background.jpeg);
