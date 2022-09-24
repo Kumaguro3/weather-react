@@ -1,5 +1,9 @@
-.weather-forecast {
-  text-align: center;
+.week-forecast {
+  max-width: 300px;
+}
+
+.row {
+  white-space: nowrap;
 }
 
 .weather-forecast-day,

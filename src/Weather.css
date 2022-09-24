@@ -84,18 +84,3 @@ h4,
 .week-forecast-icon {
   width: 10px;
 }
-
-.img-fluid {
-  width: 200px;
-}
-
-.row {
-  padding: 5px;
-}
-
-.row .weekDay .h2 {
-  font-weight: 650;
-}
-.linkgit {
-  text-align: center;
-}
