@@ -4,6 +4,7 @@
 
 .week-forecast .row {
   white-space: nowrap;
+  justify-content: space-evenly;
 }
 
 .weather-forecast-day,
