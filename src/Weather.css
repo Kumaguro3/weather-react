@@ -10,11 +10,7 @@
   height: min-content;
   white-space: normal;
   word-wrap: break-word;
-  display: inline-flex;
-}
-
-.weather {
-  max-width: 550px;
+  display: inline-block;
 }
 
 .button-click:hover {
@@ -22,7 +18,7 @@
 }
 
 .container .btn-group {
-  display: flex;
+  display: inline-flex;
 }
 
 .container h1 {
@@ -74,6 +70,7 @@ h4,
 
 .container3 {
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .container3 h6 {

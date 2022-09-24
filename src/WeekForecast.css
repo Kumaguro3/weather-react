@@ -1,8 +1,8 @@
 .week-forecast {
-  max-width: 300px;
+  margin-bottom: 20px;
 }
 
-.row {
+.week-forecast .row {
   white-space: nowrap;
 }
 

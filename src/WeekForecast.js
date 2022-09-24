@@ -30,20 +30,17 @@ export default function WeekForecast(props) {
     return (
       <div className="week-forecast">
         <div className="row">
-          <div className="col-md-3 col-sm-3 col-xs-2 ">
+          <div className="col ">
             <WeatherForecastDay data={forecast[1]} />
           </div>
-          <div className="col-md-3 col-sm-3 col-xs-2 ">
+          <div className="col ">
             <WeatherForecastDay data={forecast[2]} />
           </div>
-          <div className="col-md-3 col-sm-3 col-xs-2 ">
+          <div className="col ">
             <WeatherForecastDay data={forecast[3]} />
           </div>
-          <div className="col-md-3 col-sm-3  col-xs-2">
+          <div className="col">
             <WeatherForecastDay data={forecast[4]} />
-          </div>
-          <div className="col-md-3 col-sm-3 col-xs-2 ">
-            <WeatherForecastDay data={forecast[5]} />
           </div>
         </div>
       </div>
