@@ -18,7 +18,15 @@
 }
 
 .container .btn-group {
-  display: inline-flex;
+  display: flex;
+}
+
+.weather-info .main-city {
+  margin-top: 20px;
+}
+
+.weather-info .formatted-date {
+  margin-bottom: 30px;
 }
 
 .container h1 {
@@ -76,8 +84,4 @@ h4,
 .container3 h6 {
   display: block;
   font-size: 15px;
-}
-
-.week-forecast-icon {
-  width: 10px;
 }

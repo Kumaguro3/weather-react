@@ -14,7 +14,6 @@ export default function Weather(props) {
       ready: true,
       coordinates: response.data.coord,
       city: response.data.name,
-      day: "Monday",
       date: new Date(response.data.dt * 1000),
       temperature: response.data.main.temp,
       icon: response.data.weather[0].icon,
@@ -35,7 +34,7 @@ export default function Weather(props) {
   }
 
   function Search() {
-    let apiKey = "094780c710fa4efd669f0df8c3991927";
+    let apiKey = "63214c4281922e3bb72fdf12dada7734";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(HandleResponse);
   }
@@ -44,8 +43,8 @@ export default function Weather(props) {
     return (
       <div className="weather">
         <div className="container">
-          <div className="btn-group" margin="10px">
-            <form onSubmit={HandleSubmit}>
+          <div className="btn-group">
+            <form onSubmit={HandleSubmit} className="form">
               <input
                 type="text"
                 placeholder="Enter a city"
@@ -57,9 +56,6 @@ export default function Weather(props) {
                 Go!
               </button>
             </form>
-            <button type="click" className="button-click" id="current-location">
-              Current
-            </button>
           </div>
           <WeatherInfo data={weatherData} />
           <WeekForecast coordinates={weatherData.coordinates} />
