@@ -13,7 +13,7 @@
   display: inline-flex;
 }
 
-.Weather {
+.weather {
   max-width: 550px;
 }
 
@@ -72,9 +72,17 @@ h4,
   text-decoration: none;
 }
 
+.container3 {
+  margin-top: 20px;
+}
+
 .container3 h6 {
   display: block;
   font-size: 15px;
+}
+
+.week-forecast-icon {
+  width: 10px;
 }
 
 .img-fluid {
@@ -90,7 +98,4 @@ h4,
 }
 .linkgit {
   text-align: center;
-}
-.weather-forecast-temperature-min {
-  color: gray;
 }

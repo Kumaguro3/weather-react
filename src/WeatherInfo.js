@@ -7,7 +7,7 @@ import "./Weather.css";
 export default function WeatherInfo(props) {
   return (
     <>
-      <div ClassName="WeatherInfo">
+      <div className="WeatherInfo">
         <h1 className="main-city" id="main-city">
           {props.data.city}
         </h1>
@@ -15,7 +15,9 @@ export default function WeatherInfo(props) {
           <FormattedDate date={props.data.date} />
         </h4>
         <div>
-          <WeatherIcon code={props.data.icon} />
+          <div className="main-weather-icon">
+            <WeatherIcon code={props.data.icon} size={130} />
+          </div>
         </div>
 
         <br />
@@ -32,19 +34,19 @@ export default function WeatherInfo(props) {
         <div className="col-md-12 col-sm-12 col-xs-3 side-weather-info">
           <h6 className="precipitation">
             Cloudiness:{" "}
-            <spam id="precipitation"> {Math.round(props.data.cloudiness)}</spam>
+            <span id="precipitation"> {Math.round(props.data.cloudiness)}</span>
             %
           </h6>
         </div>
         <div className="col-md-12 col-sm-12 col-xs-3 side-weather-info">
           <h6 className="humidity">
-            Humidity: <spam id="humidity">{props.data.humidity}</spam>%
+            Humidity: <span id="humidity">{props.data.humidity}</span>%
           </h6>
         </div>
 
         <div className="col-md-12 col-sm-12 col-xs-3 side-weather-info">
           <h6 className="wind">
-            Wind: <spam id="wind"> {Math.round(props.data.wind)}</spam>km/h
+            Wind: <span id="wind"> {Math.round(props.data.wind)}</span>km/h
           </h6>
         </div>
       </div>

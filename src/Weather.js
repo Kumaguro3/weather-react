@@ -2,15 +2,17 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
 import WeatherInfo from "./WeatherInfo";
+import WeekForecast from "./WeekForecast";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
 
-  function handleResponse(response) {
+  function HandleResponse(response) {
     console.log(response.data);
     setWeatherData({
       ready: true,
+      coordinates: response.data.coord,
       city: response.data.name,
       day: "Monday",
       date: new Date(response.data.dt * 1000),
@@ -23,48 +25,49 @@ export default function Weather(props) {
     });
   }
 
-  function handleSubmit(event) {
+  function HandleSubmit(event) {
     event.preventDefault();
-    search();
+    Search();
   }
 
-  function handleCityChange(event) {
+  function HandleCityChange(event) {
     setCity(event.target.value);
   }
 
-  function search() {
+  function Search() {
     let apiKey = "094780c710fa4efd669f0df8c3991927";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(handleResponse);
+    axios.get(apiUrl).then(HandleResponse);
   }
 
   if (weatherData.ready) {
     return (
-      <div className="Weather">
+      <div className="weather">
         <div className="container">
           <div className="btn-group" margin="10px">
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={HandleSubmit}>
               <input
                 type="text"
                 placeholder="Enter a city"
                 id="search-text-input"
                 autoFocus="on"
-                onChange={handleCityChange}
+                onChange={HandleCityChange}
               />
-              <button type="submit" class="button-click">
+              <button type="submit" className="button-click">
                 Go!
               </button>
             </form>
-            <button type="click" class="button-click" id="current-location">
+            <button type="click" className="button-click" id="current-location">
               Current
             </button>
           </div>
           <WeatherInfo data={weatherData} />
+          <WeekForecast coordinates={weatherData.coordinates} />
         </div>
       </div>
     );
   } else {
-    search();
+    Search();
     return "Loading...";
   }
 }
