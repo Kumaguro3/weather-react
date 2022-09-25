@@ -26,7 +26,8 @@ input {
   width: 230px;
   min-width: 230px;
   max-width: 240px;
-  justify-content: center;
+  margin-left: 0 auto;
+  margin-right: 0 auto;
   text-align: center;
 }
 

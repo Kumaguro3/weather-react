@@ -43,7 +43,7 @@ export default function Weather(props) {
     return (
       <div className="weather">
         <div className="container">
-          <div className="btn-group">
+          <div className="btn-group w-100 d-flex justify-content-center">
             <form onSubmit={HandleSubmit} className="form">
               <input
                 type="text"
