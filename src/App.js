@@ -1,5 +1,6 @@
 import "./App.css";
 import React from "react";
+import Footer from "./Footer.js";
 import Weather from "./Weather.js";
 
 export default function App() {
@@ -8,10 +9,7 @@ export default function App() {
       <div className="container">
         <Weather defaultCity="Tokyo" />
       </div>
-      <footer>
-        This app has been built by{" "}
-        <a href="https://github.com/Kumaguro3/weather-react">Sergent Julie</a>
-      </footer>
+      <Footer />
     </div>
   );
 }
